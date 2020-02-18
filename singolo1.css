@@ -26,13 +26,16 @@ body {
     font-size: 10px;
     font-family: 'Lato', sans-serif;
 }
-
-.wrapper {
-    width: 960px;
-    max-width: 1020px;
-    padding: 30px 40px;
-    margin-left: auto;
+.header, section {
+	max-width: 1020px;
+	margin-left: auto;
     margin-right: auto;
+}
+.wrapper {
+    padding: 30px 30px;
+}
+.hidden {
+    display: none;
 }
 
 /* HEADER */
@@ -41,17 +44,12 @@ body {
     background-color: #2d303a;
     border-bottom: 6px solid #323746;
 }
-
 .logo{
     float: left;
     font-weight: bold;
-}
-h1 {
-    margin: 0;
     font-size: 2.41em;
     letter-spacing: 0;
     text-indent: 10px;
-    display: inline-block;
 }
 .logo:link, 
 .logo:visited, 
@@ -61,8 +59,8 @@ h1 {
     color: white;
 }
 .logo span{
-    font-size: 2.5em;
     display: inline-block;
+    text-indent: 0;
 }
 .logo span, li a.current {
     color: #f06c64;
@@ -122,7 +120,7 @@ h1 {
     border-bottom: 6px solid #ea676b;
 }
 .slider .wrapper {
-    padding: 54px 40px;
+    padding-top: 54px;
     position: relative;
 }
 .slider__arrows {
