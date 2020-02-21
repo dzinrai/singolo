@@ -21,10 +21,10 @@
 
 body {
     margin: 0;
-    color: #fff;
-    background-color: #f2f2f2;
+    color: #ffffff;
     font-size: 10px;
     font-family: 'Lato', sans-serif;
+    background-color: #f2f2f2;
 }
 .header, section {
 	max-width: 1020px;
@@ -75,16 +75,17 @@ body {
     padding: 0;
 }
 .navigation ul li{
-    cursor: pointer;
+    position: relative;
     display: inline-block;
     margin-left: 13px;
     margin-right: 13px;
     line-height: 40px;
     letter-spacing: 0;
+    cursor: pointer;
 }
 .navigation ul li:hover{
-    cursor: pointer;
     color: #f06c64;
+    cursor: pointer;
 }
 .navigation a {
     color: inherit;
@@ -96,11 +97,11 @@ body {
     text-decoration: none;
 }
 .navigation ul li:not(:first-child)::before {
+    position: absolute;
+    left: -5px;
+    display: list-item;
     content: "";
     font-size: 8px;
-    text-indent: -5px;
-    display: list-item;
-    position: absolute;
 }
 .navigation ul li:first-child {
     margin-right: 15px;
@@ -120,12 +121,12 @@ body {
     border-bottom: 6px solid #ea676b;
 }
 .slider .wrapper {
-    padding-top: 54px;
     position: relative;
+    padding-top: 54px;
 }
 .slider__arrows {
-    width: 100%;
     position: relative;
+    width: 100%;
 }
 .slider__image {
     position: relative;
@@ -133,14 +134,14 @@ body {
 }
 .slider__arrow-left,
 .slider__arrow-right {
+    position: absolute;
+    z-index: 1;
+    top: 12px;
     width: 60px;
     height: 458px;
-    top: 12px;
-    position: absolute;
-    cursor: pointer;
-    z-index: 1;
     background-size: 16px 27px;
     background-position: 11px;
+    cursor: pointer;
 }
 .slider__arrow-left:hover,
 .slider__arrow-right:hover {
@@ -153,9 +154,9 @@ body {
 }
 .slider__arrow-right {
     right: 0;
-    transform: scaleX(-1);
     background-image: url(./assets/chev.png);
     background-repeat: no-repeat;
+    transform: scaleX(-1);
 }
 .image__vertical {
     position: absolute;
@@ -179,8 +180,8 @@ h2 {
 
 h3 {
     display: inline-block;
-    vertical-align: top;
     margin: 0 0 10px;
+    vertical-align: top;
     font-size: 1.8em;
     letter-spacing: 0;
     font-weight: 900;
@@ -192,10 +193,10 @@ h3 {
     border-bottom: 6px solid #fff;
 }
 .services__description {
+    margin: 0 10px 47px;
     font-size: 1.783em;
     line-height: 29px;
     font-weight: normal;
-    margin: 0 10px 47px;
 }
 .container {
     display: flex; /* or inline-flex */
@@ -210,7 +211,7 @@ h3 {
 .services__item {
     width: 300px;
     max-width: 300px;
-    margin: 0 10px 16px;
+    margin: 0 10px 10px;
 }
 .item__icon {
     float: left;
@@ -243,9 +244,10 @@ h3 {
 }
 .item__description {
     display: inline-block;
-    line-height: 17px;
     margin: 0 0 0 10px;
     max-width: 220px;
+    line-height: 17px;
+    overflow: hidden;
 }
 .item__description p {
     margin: 0;
