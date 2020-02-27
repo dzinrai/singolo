@@ -11,15 +11,15 @@
 
     <header class="header">
         <div class="wrapper">
-            <a class="logo" href="#">SINGOLO<span>*</span></a>
+            <a class="logo" href="#">SINGOLO<span class="logo__star">*</span></a>
             <h1 class="hidden">SINGOLO</h1>
             <nav class="navigation">
                 <ul>
-                    <li><a class="current" href="#">HOME</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    <li><a href="#">PORTFOLIO</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li class="navigation__item navigation__item_current"><a href="#">HOME</a></li>
+                    <li class="navigation__item"><a href="#">SERVICES</a></li>
+                    <li class="navigation__item"><a href="#">PORTFOLIO</a></li>
+                    <li class="navigation__item"><a href="#">ABOUT</a></li>
+                    <li class="navigation__item"><a href="#">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -28,15 +28,15 @@
     <section class="slider">
         <div class="wrapper">
 
-            <div class="slider__arrows">
-                <div class="slider__arrow-left"></div>
-                <div class="slider__arrow-right"></div>
+            <div class="arrows">
+                <div class="arrows__arrow-left"></div>
+                <div class="arrows__arrow-right"></div>
             </div>
 
             
             <div class="slider__image">
-                <img class="image__vertical" src="./assets/iPhoneVertical.png" alt="iPhone Vertical">
-                <img class="image__horizontal" src="./assets/iPhoneHorizontal.png" alt="iPhone Horizontal">
+                <img class="slider__image_vertical" src="./assets/iPhoneVertical.png" alt="iPhone Vertical">
+                <img class="slider__image_horizontal" src="./assets/iPhoneHorizontal.png" alt="iPhone Horizontal">
             </div>
         </div>
         
@@ -45,55 +45,55 @@
 
     <section class="services">
         <div class="wrapper">
-            <h2>Our Services</h2>
+            <h2 class="services__title">Our Services</h2>
             <p class="services__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <div class="layout-3-column container">
+            <div class="layout-3-column">
 
-                <div class="services__item">
-                    <span class="item__icon icon-1"></span>
-                    <div class="item__description">
-                        <h3>Custom Design</h3>
-                        <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit</p>
+                <div class="service">
+                    <span class="service__icon service__icon_icon-1"></span>
+                    <div class="service__container">
+                        <h3 class="service__title">Custom Design</h3>
+                        <p class="service__description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit</p>
                     </div>
                 </div>
-                <div class="services__item">
-                    <span class="item__icon icon-2"></span>
-                    <div class="item__description">
-                        <h3>Inovative Ideas</h3>
-                        <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+                <div class="service">
+                    <span class="service__icon service__icon_icon-2"></span>
+                    <div class="service__container">
+                        <h3 class="service__title">Inovative Ideas</h3>
+                        <p class="service__description">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
                     </div>
                     
                 </div>
-                <div class="services__item">
-                    <span class="item__icon icon-3"></span>
-                    <div class="item__description">
-                        <h3>Love Is The Answer</h3>
-                        <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+                <div class="service">
+                    <span class="service__icon service__icon_icon-3"></span>
+                    <div class="service__container">
+                        <h3 class="service__title">Love Is The Answer</h3>
+                        <p class="service__description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
                     </div>
                     
                 </div>
 
-                <div class="services__item">
-                    <span class="item__icon icon-4"></span>
-                    <div class="item__description">
-                        <h3>Responsive Layout</h3>
-                        <p>Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
+                <div class="service">
+                    <span class="service__icon service__icon_icon-4"></span>
+                    <div class="service__container">
+                        <h3 class="service__title">Responsive Layout</h3>
+                        <p class="service__description">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
                     </div>
                     
                 </div>
-                <div class="services__item">
-                    <span class="item__icon icon-5"></span>
-                    <div class="item__description">
-                        <h3>24 / 7 Support</h3>
-                        <p>Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .</p>
+                <div class="service">
+                    <span class="service__icon service__icon_icon-5"></span>
+                    <div class="service__container">
+                        <h3 class="service__title">24 / 7 Support</h3>
+                        <p class="service__description">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .</p>
                     </div>
                     
                 </div>
-                <div class="services__item">
-                    <span class="item__icon icon-6"></span>
-                    <div class="item__description">
-                        <h3>Feel Like A Star</h3>
-                        <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
+                <div class="service">
+                    <span class="service__icon service__icon_icon-6"></span>
+                    <div class="service__container">
+                        <h3 class="service__title">Feel Like A Star</h3>
+                        <p class="service__description">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
                     </div>
                     
                 </div>
