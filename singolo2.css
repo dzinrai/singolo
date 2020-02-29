@@ -60,7 +60,7 @@ section {
     margin: 0;
     font-size: 18px;
     line-height: 29px;
-    letter-spacing: 0;
+    letter-spacing: -0.2px;
     font-weight: normal;
 }
 .tags {
@@ -89,12 +89,10 @@ section {
 }
 .layout-4-column {
     display: flex;
-    max-height: 610px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 19px;
-    overflow: hidden;
 }
 .portfolio-items__item {
     margin-bottom: 20px;
@@ -105,7 +103,9 @@ section {
 .portfolio-items__item {
     background-color: #636983;
 }
-
+.portfolio-items__item:nth-child(n+13) {
+    display: none;
+}
 /* ABOUT US */
 .about-us {
     height: 728px;
@@ -123,9 +123,11 @@ section {
 }
 .about-us__descrition {
     margin: 0 0 45px;
+    height: 58px;
+    max-height: 58px;
     font-size: 18px;
     line-height: 29px;
-    letter-spacing: 0;
+    letter-spacing: -0.1px;
     font-weight: normal;
 }
 .layout-3-column {
@@ -167,7 +169,11 @@ section {
 }
 .profile__description {
     margin: 10px 0 0;
+    max-height: 40px;
     font-size: 12px;
+    letter-spacing: 0;
+    line-height: 20px;
+    overflow: hidden;
 }
 .profile__social {
     margin: 25px 0 0 0;
