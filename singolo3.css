@@ -269,22 +269,21 @@ body {
     height: 30px;
 }
 .profile__social_facebook .social-link {
-    background-color: #666d89;
     -webkit-mask:  url(./assets/facebook.png) no-repeat 50% 50%;
     mask: url(./assets/facebook.png) no-repeat 50% 50%;
 }
 .profile__social_google .social-link {
-    background-color: #666d89;
     -webkit-mask:  url(./assets/google.png) no-repeat 50% 50%;
     mask: url(./assets/google.png) no-repeat 50% 50%;
 }
 .profile__social_twitter .social-link {
-    background-color: #666d89;
     -webkit-mask:  url(./assets/twitter.png) no-repeat 50% 50%;
     mask: url(./assets/twitter.png) no-repeat 50% 50%;
 }
 .profile__social_linkedin .social-link {
-    background-color: #666d89;
     -webkit-mask:  url(./assets/linkedin.png) no-repeat 50% 50%;
     mask: url(./assets/linkedin.png) no-repeat 50% 50%;
+}
+.footer .social-link {
+    background-color: #666d89;
 }

@@ -278,7 +278,7 @@ body {
 }
 .portfolio .wrapper {
     position: relative;
-    height: 834px;
+    height: 833px;
     padding: 30px 30px 0;
     background-color: #2d303a;
     border-bottom: 6px solid #323746;
@@ -325,7 +325,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 19px 10px;
+    margin: 18px 10px;
     justify-content: space-between;
 }
 .portfolio-items__item {
@@ -348,7 +348,7 @@ body {
     width: 960px;
     max-width: 960px;
     height: 699px;
-    padding: 30px 30px 0 30px;
+    padding: 29px 30px 0 30px;
     background-color: #f2f2f2;
     border-bottom: 6px solid #fff;
 }
@@ -417,10 +417,13 @@ body {
     overflow: hidden;
 }
 .profile__social {
-    margin: 16px 0 0 0;
+    margin: 16px 0 0 2px;
 }
 .about-us__profile_employee-2 .profile__social {
     margin: 16px 0 0 -1px;
+}
+.about-us__profile_employee-1 .profile__social_facebook {
+    margin: 0 0 0 -1px;
 }
 .about-us__profile_employee-2 .profile__social_facebook {
     margin: 0 -1px 0 2px;
@@ -501,3 +504,249 @@ body {
     -webkit-mask:  url(./assets/linkedin.png) no-repeat 50% 50%;
     mask: url(./assets/linkedin.png) no-repeat 50% 50%;
 }
+
+/* GET A QUOTE */
+.get-a-quote {
+    margin: 0;
+    height: 100%;
+    max-height: 654px;
+}
+.get-a-quote .wrapper{
+    height: 618px;
+    padding: 30px 30px 0;
+    color: #f0d8d9;
+    background-color: #f06c64;
+    border-bottom: 6px solid #ea676b;
+}
+.get-a-quote__title {
+    margin: 29px 10px 20px;
+    font-size: 3em;
+    font-weight: 900;
+    letter-spacing: 0;
+}
+.get-a-quote__descrition {
+    max-height: 58px;
+    margin: 0 10px 44px;
+    font-size: 1.783em;
+    line-height: 29px;
+    letter-spacing: 0;
+    font-weight: normal;
+}
+.layout-2-column {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.get-a-quote__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 620px;
+    margin: 0 10px;
+    padding: 0 1px 0 0;
+    font-weight: normal;
+}
+.get-a-quote__form input,
+.get-a-quote__form textarea {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 18px;
+    color: #f08586;
+    background-color: #d6564f;    
+    border-radius: 3px;
+    font-weight: normal;
+    font-family: 'Lato', Verdana, sans-serif;
+}
+.get-a-quote__form input {
+    margin: 0 0 16px;
+}
+.get-a-quote__form input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #f08586;
+    opacity: 1; /* Firefox */
+}
+.get-a-quote__form input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #f08586;
+}
+.get-a-quote__form input::-ms-input-placeholder { /* Microsoft Edge */
+    color: #f08586;
+}
+.get-a-quote__form .form__details_textarea{
+    padding: 10px 15px 12px;
+    resize: none;
+}
+.get-a-quote__form .form__submit-button {
+    margin: 10px 0;
+    max-height: 38px;
+    max-width: 120px;
+    font-size: 14px;
+    color: #f0d8d9;
+    cursor: pointer;
+}
+.get-a-quote__form .form__submit-button:hover {
+    padding: 8px 15px;
+    font-weight: bold;
+    border: 2px solid #f0d8d9;
+    transition: all .1s;
+}
+.contacts {
+    width: 300px;
+    margin: 0 10px;
+}
+.contacts__title {
+    margin: -2px 0 0;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.1px;
+}
+.contacts__description {
+    display: inline-block;
+    max-height: 90px;
+    margin: 9px 0 0;
+    font-size: 12px;
+    letter-spacing: 0.1px;
+    line-height: 21px;
+}
+.contacts__container{
+    display: flex;
+    flex-direction: column;
+    margin: 26px 0 0 13px;
+    font-size: 12px;
+}
+.contacts__container a:link,
+.contacts__container a:visited,
+.contacts__container a:active,
+.contacts__container a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+.contacts__location-adress,
+.contacts__phone-number,
+.contacts__email-adress {
+    display: inline-block;
+    position: relative;
+    width: max-content;
+    margin: 0 40px 6px 4px;
+    padding: 0 6px;
+}
+
+.contacts__phone-number:hover,
+.contacts__email-adress:hover {
+    color: #f0d8d9;
+    background-color: #d6564f;
+    box-shadow: lightblue;
+    border-radius: 3px;
+    transition: background .3s;
+    cursor: pointer;
+}
+.contacts__location-adress::before,
+.contacts__phone-number::before,
+.contacts__email-adress::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+.contacts__location-adress::before {
+    top: 1px;
+    left: -17px;
+    background-image: url(./assets/location.png);
+}
+.contacts__phone-number::before {
+    top: 1px;
+    left: -17px;
+    background-image: url(./assets/phone.png);
+}
+.contacts__email-adress::before {
+    top: 4px;
+    left: -17px;
+    background-image: url(./assets/mail.png);
+}
+
+/* FOOTER */
+.footer {
+    width: 100%;
+    height: 76px;
+    max-height: 76px;
+    color: #666d89;
+}
+.footer .wrapper {
+    height: 54px;
+    width: 960px;
+    padding: 22px 30px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: #2d303a;
+}
+.copyright {
+    font-size: 12px;
+    margin: 8px 0 0 12px;
+    letter-spacing: -0.1px;
+}
+.footer .profile__social {
+    margin: 0 10px 0 0;
+}
+.footer .social-icon {
+    background-color: #2d303a;
+}
+.footer .social-icon:hover {
+    border: none;
+    width: 32px;
+    height: 32px;
+    background-image: none;
+    background-color: #666d89;
+}
+.footer .social-icon:hover .social-link {
+    margin: 1px 0 0 0;
+    background-color: #2d303a;
+    transition: background .4s;
+}
+.profile__social_facebook {
+    margin: 0 -1px 0 0;
+    background-image: url(./assets/facebook.png);
+}
+.profile__social_google {
+    margin: 0 0 0 7px;
+    background-image: url(./assets/google.png);
+}
+.profile__social_twitter {
+    margin: 0 0 0 6px;
+    background-image: url(./assets/twitter.png);
+    background-position: 9px;
+}
+.profile__social_linkedin {
+    margin: 0 0 0 6px;
+    background-image: url(./assets/linkedin.png);
+}
+.social-link {
+    display: block;
+    width: 100%;
+    height: 30px;
+}
+.profile__social_facebook .social-link {
+    -webkit-mask:  url(./assets/facebook.png) no-repeat 50% 50%;
+    mask: url(./assets/facebook.png) no-repeat 50% 50%;
+}
+.profile__social_google .social-link {
+    -webkit-mask:  url(./assets/google.png) no-repeat 50% 50%;
+    mask: url(./assets/google.png) no-repeat 50% 50%;
+}
+.profile__social_twitter .social-link {
+    -webkit-mask:  url(./assets/twitter.png) no-repeat 50% 50%;
+    mask: url(./assets/twitter.png) no-repeat 50% 50%;
+}
+.profile__social_linkedin .social-link {
+    -webkit-mask:  url(./assets/linkedin.png) no-repeat 50% 50%;
+    mask: url(./assets/linkedin.png) no-repeat 50% 50%;
+}
+.footer .social-link {
+    background-color: #666d89;
+}
+
