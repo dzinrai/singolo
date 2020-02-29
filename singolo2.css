@@ -204,23 +204,23 @@ section {
 .profile__social_facebook {
     margin: 0 0 0 1px;
     background-color: #f2f2f2;
-    background-image: url(./assets/facebook.svg);
+    background-image: url(./assets/facebook.png);
 }
 .profile__social_google {
     margin: 0 0 0 7px;
     background-color: #f2f2f2;
-    background-image: url(./assets/google.svg);
+    background-image: url(./assets/google.png);
 }
 .profile__social_twitter {
     margin: 0 0 0 5px;
     background-color: #f2f2f2;
-    background-image: url(./assets/twitter.svg);
+    background-image: url(./assets/twitter.png);
     background-position: 9px;
 }
 .profile__social_linkedin {
     margin: 0 0 0 7px;
     background-color: #f2f2f2;
-    background-image: url(./assets/linkedin.svg);
+    background-image: url(./assets/linkedin.png);
 }
 .social-link {
     display: block;
@@ -229,21 +229,21 @@ section {
 }
 .profile__social_facebook .social-link {
     background-color: #666d89;
-    -webkit-mask:  url(./assets/facebook.svg) no-repeat 50% 50%;
-    mask: url(./assets/facebook.svg) no-repeat 50% 50%;
+    -webkit-mask:  url(./assets/facebook.png) no-repeat 50% 50%;
+    mask: url(./assets/facebook.png) no-repeat 50% 50%;
 }
 .profile__social_google .social-link {
     background-color: #666d89;
-    -webkit-mask:  url(./assets/google.svg) no-repeat 50% 50%;
-    mask: url(./assets/google.svg) no-repeat 50% 50%;
+    -webkit-mask:  url(./assets/google.png) no-repeat 50% 50%;
+    mask: url(./assets/google.png) no-repeat 50% 50%;
 }
 .profile__social_twitter .social-link {
     background-color: #666d89;
-    -webkit-mask:  url(./assets/twitter.svg) no-repeat 50% 50%;
-    mask: url(./assets/twitter.svg) no-repeat 50% 50%;
+    -webkit-mask:  url(./assets/twitter.png) no-repeat 50% 50%;
+    mask: url(./assets/twitter.png) no-repeat 50% 50%;
 }
 .profile__social_linkedin .social-link {
     background-color: #666d89;
-    -webkit-mask:  url(./assets/linkedin.svg) no-repeat 50% 50%;
-    mask: url(./assets/linkedin.svg) no-repeat 50% 50%;
+    -webkit-mask:  url(./assets/linkedin.png) no-repeat 50% 50%;
+    mask: url(./assets/linkedin.png) no-repeat 50% 50%;
 }
