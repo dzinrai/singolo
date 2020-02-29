@@ -105,6 +105,7 @@ body {
     color: #f08586;
 }
 .get-a-quote__form .form__details_textarea{
+    max-height: 202px;
     padding: 10px 15px 12px;
     resize: none;
 }
@@ -170,11 +171,10 @@ body {
     box-shadow: lightblue;
     border-radius: 3px;
     transition: background .3s;
-    cursor: pointer;
 }
 .contacts__location-adress::before,
-.contacts__phone-number::before,
-.contacts__email-adress::before {
+.contacts__phone-number a::before,
+.contacts__email-adress a::before {
     content: "";
     width: 13px;
     height: 13px;
@@ -186,12 +186,12 @@ body {
     left: -17px;
     background-image: url(./assets/location.png);
 }
-.contacts__phone-number::before {
+.contacts__phone-number a::before {
     top: 1px;
     left: -17px;
     background-image: url(./assets/phone.png);
 }
-.contacts__email-adress::before {
+.contacts__email-adress a::before {
     top: 4px;
     left: -17px;
     background-image: url(./assets/mail.png);
