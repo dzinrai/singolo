@@ -174,7 +174,8 @@ body {
 
 /* SERVICES */
 .services {
-    max-height: 494px;
+    max-height: 506px;
+    height: 100%;
     margin: 0;
     color: #666d89;
 }
