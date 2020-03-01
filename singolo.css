@@ -40,12 +40,13 @@ body {
 /* HEADER */
 .header {
     max-height: 95px;
+    background-color: #2d303a;
+    border-bottom: 6px solid #323746;
 }
 .header .wrapper {
     height: 59px;
     padding: 30px 30px 0;
-    background-color: #2d303a;
-    border-bottom: 6px solid #323746;
+    
 }
 .logo{
     float: left;
@@ -119,13 +120,13 @@ body {
 /* SLIDER */
 .slider { 
     max-height: 594px;
+    background-color: #f06c64;
+    border-bottom: 6px solid #ea676b;
 }
 .slider .wrapper {
     position: relative;
     height: 540px;
     padding: 54px 30px 0;
-    background-color: #f06c64;
-    border-bottom: 6px solid #ea676b;
 }
 .arrows {
     position: relative;
@@ -178,12 +179,12 @@ body {
     height: 100%;
     margin: 0;
     color: #666d89;
+    background-color: #f2f2f2;
+    border-bottom: 6px solid #fff;
 }
 .services .wrapper {
     height: 464px;
-    padding: 36px 30px 0;
-    background-color: #f2f2f2;
-    border-bottom: 6px solid #fff;
+    padding: 30px 30px 0;   
 }
 .services__title {
     margin: 29px 10px 20px;
@@ -275,13 +276,13 @@ body {
 .portfolio {
     max-height: 869px;
     color: #636983;
+    background-color: #2d303a;
+    border-bottom: 6px solid #323746;
 }
 .portfolio .wrapper {
     position: relative;
     height: 833px;
-    padding: 30px 30px 0;
-    background-color: #2d303a;
-    border-bottom: 6px solid #323746;
+    padding: 30px 30px 0;  
 }
 .portfolio__title{
     margin: 30px 10px 19px;
@@ -343,14 +344,14 @@ body {
 /* ABOUT US */
 .about-us {
     color: #666d89;
+    background-color: #f2f2f2;
+    border-bottom: 6px solid #fff;
 }
 .about-us .wrapper {
     width: 960px;
     max-width: 960px;
     height: 699px;
     padding: 29px 30px 0 30px;
-    background-color: #f2f2f2;
-    border-bottom: 6px solid #fff;
 }
 .about-us__title {
     margin: 30px 10px 20px;
@@ -510,13 +511,13 @@ body {
     margin: 0;
     height: 100%;
     max-height: 654px;
+    color: #f0d8d9;
+    background-color: #f06c64;
+    border-bottom: 6px solid #ea676b;
 }
 .get-a-quote .wrapper{
     height: 618px;
     padding: 30px 30px 0;
-    color: #f0d8d9;
-    background-color: #f06c64;
-    border-bottom: 6px solid #ea676b;
 }
 .get-a-quote__title {
     margin: 29px 10px 20px;
@@ -694,6 +695,7 @@ body {
     height: 76px;
     max-height: 76px;
     color: #666d89;
+    background-color: #2d303a;
 }
 .footer .wrapper {
     height: 54px;
@@ -703,7 +705,6 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    background-color: #2d303a;
 }
 .copyright {
     font-size: 12px;
