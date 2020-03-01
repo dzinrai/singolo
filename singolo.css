@@ -565,15 +565,34 @@ body {
 .get-a-quote__form input {
     margin: 0 0 16px;
 }
-.get-a-quote__form input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.get-a-quote__form input::placeholder,
+.get-a-quote__form textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #f08586;
     opacity: 1; /* Firefox */
 }
-.get-a-quote__form input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.get-a-quote__form input:-ms-input-placeholder,
+.get-a-quote__form textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: #f08586;
 }
-.get-a-quote__form input::-ms-input-placeholder { /* Microsoft Edge */
+.get-a-quote__form input::-ms-input-placeholder,
+.get-a-quote__form textarea::-ms-input-placeholder { /* Microsoft Edge */
     color: #f08586;
+}
+
+.get-a-quote__form input:focus,
+.get-a-quote__form textarea:focus {
+    color: #251413;
+    background-color: #f0d8d9;  
+}
+.get-a-quote__form input:focus,
+.get-a-quote__form textarea:focus,
+.get-a-quote__form input:active,
+.get-a-quote__form textarea:active {
+    outline: none;
+}
+.get-a-quote__form input:focus::placeholder,
+.get-a-quote__form textarea:focus::placeholder {
+    color: transparent;
 }
 .get-a-quote__form .form__details_textarea{
     max-height: 202px;
@@ -644,16 +663,16 @@ body {
     transition: background .3s;
     cursor: pointer;
 }
-.contacts__location-adress::before,
+.contacts__location-adress a::before,
 .contacts__phone-number a::before,
 .contacts__email-adress a::before {
     content: "";
-    width: 13px;
+    width: 30px;
     height: 13px;
     position: absolute;
     background-repeat: no-repeat;
 }
-.contacts__location-adress::before {
+.contacts__location-adress a::before {
     top: 1px;
     left: -17px;
     background-image: url(./assets/location.png);
