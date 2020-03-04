@@ -34,7 +34,8 @@ body {
     margin-right: auto;
 }
 .hidden {
-    display: none;
+    position: absolute;
+    visibility: hidden;
 }
 
 /* HEADER */
