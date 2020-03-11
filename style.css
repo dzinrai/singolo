@@ -19,6 +19,9 @@
     font-weight: 300;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     color: #ffffff;
@@ -67,8 +70,7 @@ body {
     display: inline-block;
     text-indent: 0;
 }
-.logo .logo__star,
-.navigation__item_current {
+.logo .logo__star {
     color: #f06c64;
 }
 .navigation{
@@ -80,7 +82,7 @@ body {
     margin: 0;
     padding: 0;
 }
-.navigation .navigation__item{
+.navigation .navigation__item {
     position: relative;
     display: inline-block;
     margin-left: 13px;
@@ -89,7 +91,12 @@ body {
     letter-spacing: 0;
     cursor: pointer;
 }
-.navigation .navigation__item:hover{
+.navigation__item a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.navigation .navigation__item:hover {
     color: #f06c64;
     cursor: pointer;
 }
@@ -99,6 +106,9 @@ body {
 .navigation__item a:active {
     color: inherit;
     text-decoration: none;
+}
+.navigation__item.navigation__item_current a {
+    color: #f06c64;
 }
 .navigation .navigation__item:not(:first-child)::before {
     position: absolute;
