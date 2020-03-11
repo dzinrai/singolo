@@ -9,17 +9,17 @@
 
 <body>
 
-    <header class="header">
+    <header class="header" id="home">
         <div class="wrapper">
             <a class="logo" href="#">SINGOLO<span class="logo__star">*</span></a>
             <h1 class="hidden">SINGOLO</h1>
             <nav class="navigation">
                 <ul>
-                    <li class="navigation__item"><a href="#">HOME</a></li>
-                    <li class="navigation__item"><a href="#">SERVICES</a></li>
-                    <li class="navigation__item"><a href="#">PORTFOLIO</a></li>
-                    <li class="navigation__item"><a href="#">ABOUT</a></li>
-                    <li class="navigation__item"><a href="#">CONTACT</a></li>
+                    <li class="navigation__item"><a href="#home">HOME</a></li>
+                    <li class="navigation__item"><a href="#services">SERVICES</a></li>
+                    <li class="navigation__item"><a href="#portfolio">PORTFOLIO</a></li>
+                    <li class="navigation__item"><a href="#about">ABOUT</a></li>
+                    <li class="navigation__item"><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
@@ -34,7 +34,11 @@
             </div>
 
             
-            <div class="slider__image">
+            <div class="slider__image slider__image_1">
+                <img class="slider__image_vertical" src="./assets/iPhoneVertical.png" alt="iPhone Vertical">
+                <img class="slider__image_horizontal" src="./assets/iPhoneHorizontal.png" alt="iPhone Horizontal">
+            </div>
+            <div class="slider__image slider__image_2 hidden">
                 <img class="slider__image_vertical" src="./assets/iPhoneVertical.png" alt="iPhone Vertical">
                 <img class="slider__image_horizontal" src="./assets/iPhoneHorizontal.png" alt="iPhone Horizontal">
             </div>
@@ -43,7 +47,7 @@
             
     </section>
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="wrapper">
             <h2 class="services__title">Our Services</h2>
             <p class="services__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -102,7 +106,7 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="wrapper">
             <h2 class="portfolio__title">Portfolio</h2>
             <p class="portfolio__descrition">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -159,7 +163,7 @@
         </div>
     </section>
 
-    <section class="about-us">
+    <section class="about-us" id="about">
         <div class="wrapper">
             <h2 class="about-us__title">About Us</h2>
             <p class="about-us__descrition">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -200,7 +204,7 @@
             </div>
         </div>
     </section>
-    <section class="get-a-quote">
+    <section class="get-a-quote" id="contact">
         <div class="wrapper">
             <h2 class="get-a-quote__title">Get a Quote</h2>
             <p class="get-a-quote__descrition">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -238,5 +242,7 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script> 
 </body>
+
 </html>
