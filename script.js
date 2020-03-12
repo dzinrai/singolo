@@ -11,7 +11,6 @@ let portfolio_items_array = [...portfolio_items];
 const k = Array(portfolio_items.length).fill().map( (n,i) => n=i+1 );
 //---------------------------------------------------
 
-
 // Menu gimmiks
 menu.addEventListener('click', (event) => {
     console.log(event.target);
@@ -39,12 +38,20 @@ tag_menu.addEventListener('click', (event) => {
         k[j] = k[rand];
         k[rand] = item_pos;
     }
-    console.log(k);
-    portfolio_items.forEach( (item,i) => {        
+    portfolio_items.forEach( (item,i) => {       
+        item.classList.remove('active'); 
         item.querySelector('img').src = String("./assets/pin"+k[i]+".png");        
     } );
     
 });
+portfolio_items.forEach( (item) => {        
+    item.addEventListener('click', (event)=>{
+        if(event.target.tagName === 'IMG') {
+            portfolio_items.forEach( (item) => { item.classList.remove('active'); });
+            event.target.parentElement.classList.add('active');
+        }
+    })     
+} );
 
 // Slider gimmiks
 let slides = [1,2];
@@ -53,7 +60,6 @@ let slider_container = slider.querySelector('div.slider__container');
 arrow_left.addEventListener('click', (event) => {
     slider_container.querySelector('div.slider__image_'+slides[1]).classList.remove('hidden');
     slider_container.querySelector('div.slider__image_'+slides[0]).style.animation = "moveRight 0.4s 1 ease-out";
-    console.log(slider_container.querySelector('div.slider__image_'+slides[0]));
     slides.push(slides[0]);
     slides.shift();
     setTimeout(() => {
@@ -71,7 +77,6 @@ arrow_right.addEventListener('click', (event) => {
     // [1,2]
     slider_container.querySelector('div.slider__image_'+slides[1]).classList.remove('hidden');
     slider_container.querySelector('div.slider__image_'+slides[0]).style.animation = "moveLeft 0.4s 1 ease-out";
-    console.log(slider_container.querySelector('div.slider__image_'+slides[0]));
     slides.unshift(slides[slides.length-1]);
     slides.pop();// [2,1]
     setTimeout(() => {

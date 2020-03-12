@@ -135,6 +135,7 @@ body {
     border-bottom: 6px solid #ea676b;
     transition: all .8s;
     overflow: hidden;
+    user-select: none;
 }
 .slider_blue { 
     background-color: #648BF0;
@@ -412,12 +413,25 @@ body {
     width: 220px;
     height: 187px;
     background-repeat: no-repeat;
+    cursor: pointer;
+    overflow: hidden;
+}
+.portfolio-items__item:hover:not(.active) {
+    border-radius: 6px;
+}
+.portfolio-items__item:hover:not(.active) img {
+    transform: scale(1.1);
+    transition: all .1s;
 }
 .portfolio-items__item {
     background-color: #636983;
 }
 .portfolio-items__item:nth-child(n+13) {
     display: none;
+}
+.portfolio-items__item.active{
+    outline: 5px solid #F06C64;
+    outline-offset: -5px;
 }
 /* ABOUT US */
 .about-us {
