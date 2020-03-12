@@ -237,18 +237,48 @@ body {
     -webkit-mask:  url(./assets/chev.png) no-repeat 25% 50%;
     mask: url(./assets/chev.png) no-repeat 25% 50%;
 }
-
-    
-
 .slider__image_vertical {
     position: absolute;
     left: 82px;
     top: -1px;
+    padding: 65px 53px 84px 14px;
+    background-image: url(./assets/iPhoneVertical.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
 }
 .slider__image_horizontal {
     position: absolute;
     top: 120px;
-    right: 80px;
+    right: 34px;
+    padding: 14px 138px 40px 60px;
+    background-image: url(./assets/iPhoneHorizontal.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.slider__image_vertical:hover,
+.slider__image_horizontal:hover {
+    transform: scale(.99);
+    transition: all .1s;
+}
+.vertical_screen {
+    position: absolute;
+    z-index: 2;
+}
+.vertical_screen_off {
+    width: 188px;
+    height: 333px;
+    background-color: black;
+    z-index: 1;
+}
+.horizontal_screen {
+    position: absolute;
+    z-index: 2;
+}
+.horizontal_screen_off {
+    width: 333px;
+    height: 188px;
+    background-color: black;
+    z-index: 1;
 }
 /**/
 
