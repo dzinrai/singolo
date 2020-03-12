@@ -108,16 +108,27 @@ horizontal_phone.addEventListener('click', event => {
 // Form 
 quote_form.addEventListener('submit', event => {
     event.preventDefault();
-
+    const name = quote_form.querySelector('input.form__name_input');
+    const email = quote_form.querySelector('input.form__email_input');
+    const patt = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/; //for email
     const subject = quote_form.querySelector('input.form__subject_input');
+    //
+    if( name.value.trim().length === 0 ) { 
+        name.setAttribute("required","");
+        return; // name validation
+    }
+    if( !patt.test(email.value) ) {
+        email.setAttribute("required","");
+        return; // email validation
+    }
     const details = quote_form.querySelector('textarea.form__details_textarea');
     subject.value = subject.value.trim(); // cut whitespaces
     details.value = details.value.trim(); // cut whitespaces
-
+    //
     const message_container = document.createElement("DIV");
     message_container.classList.add("alert_message_container");
     document.body.appendChild(message_container);
-
+    //
     const message = document.createElement("DIV");
     message.classList.add("alert_message");
     message_container.appendChild(message);
