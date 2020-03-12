@@ -10,7 +10,8 @@ let portfolio_items = portfolio.querySelectorAll('div.portfolio-items__item');
 let portfolio_items_array = [...portfolio_items];
 const k = Array(portfolio_items.length).fill().map( (n,i) => n=i+1 );
 //---------------------------------------------------
-
+const quote_form = document.getElementById("quote-form");
+//---------------------------------------------------
 // Menu gimmiks
 menu.addEventListener('click', (event) => {
     console.log(event.target);
@@ -91,6 +92,46 @@ arrow_right.addEventListener('click', (event) => {
         slider.classList.remove('slider_blue');
     }
 });
+// Form 
+quote_form.addEventListener('submit', event => {
+    event.preventDefault();
 
+    const subject = quote_form.querySelector('input.form__subject_input');
+    const details = quote_form.querySelector('textarea.form__details_textarea');
+    subject.value = subject.value.trim(); // cut whitespaces
+    details.value = details.value.trim(); // cut whitespaces
+
+    const message_container = document.createElement("DIV");
+    message_container.classList.add("alert_message_container");
+    document.body.appendChild(message_container);
+
+    const message = document.createElement("DIV");
+    message.classList.add("alert_message");
+    message_container.appendChild(message);
+    // Письмо отправлено
+    const message_success = document.createElement("SPAN");
+    message_success.classList.add("alert_message_span");
+    message_success.innerHTML = "Письмо отправлено";
+    message.appendChild(message_success);
+    // Тема: 
+    const message_subject = document.createElement("SPAN");
+    message_subject.classList.add("alert_message_span");
+    message_subject.innerHTML = subject.value!=="" ? "Тема:  "+subject.value : "Без темы";
+    message.appendChild(message_subject);
+    // Описание:
+    const message_details = document.createElement("SPAN");
+    message_details.classList.add("alert_message_span");
+    message_details.innerHTML = details.value!=="" ? "Описание:  "+details.value : "Без описания";
+    message.appendChild(message_details);
+    // button
+    const message_btn = document.createElement("BUTTON");
+    message_btn.classList.add("alert_message_button-ok");
+    message_btn.innerHTML = "OK";
+    message.appendChild(message_btn);
+
+    message_btn.addEventListener('click', event =>{
+        message_container.remove();
+    });
+});
 
 

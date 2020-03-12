@@ -40,7 +40,9 @@ body {
     position: absolute;
     visibility: hidden;
 }
-
+.strict_hidden {
+    display: none;
+}
 /* HEADER */
 .header {
     max-height: 95px;
@@ -782,7 +784,48 @@ body {
     left: -17px;
     background-image: url(./assets/mail.png);
 }
-
+.alert_message_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(76, 74, 73, 0.6);
+}
+.alert_message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    background-color: #f0d8d9;
+    padding: 27px 25px 19px;
+    font-size: 1.1rem;
+    color: #666d89;
+}
+.alert_message span {
+    display: inline-block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.alert_message span:first-child {
+    margin-bottom: 14px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.alert_message_button-ok {
+    width: 65%;
+    margin: 30px auto 0;
+    padding: 5px 0;
+    cursor: pointer;
+    background-color: rgb(240, 133, 134);
+    border-radius: 6px;
+    border-color: rgb(240, 133, 134);
+    font-size: 1.2rem;
+}
 /* FOOTER */
 .footer {
     width: 100%;
