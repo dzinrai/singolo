@@ -215,70 +215,78 @@ body {
     background-repeat: no-repeat;
     transform: scaleX(-1);
 }
-.slider_blue .arrows__arrow-left,
-.slider_blue .arrows__arrow-right{
-    background-image: none;
-}
-.slider_blue .arrows__arrow-left::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgba(76, 100, 164, 0.9);
-    -webkit-mask:  url(./assets/chev.png) no-repeat 25% 50%;
-    mask: url(./assets/chev.png) no-repeat 25% 50%;
-}
-.slider_blue .arrows__arrow-right::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgba(94, 124, 204, 0.9);
-    -webkit-mask:  url(./assets/chev.png) no-repeat 25% 50%;
-    mask: url(./assets/chev.png) no-repeat 25% 50%;
-}
 .slider__image_vertical {
-    position: absolute;
-    left: 82px;
-    top: -1px;
-    padding: 65px 53px 84px 14px;
-    background-image: url(./assets/iPhoneVertical.png);
+    background-image: url(./assets/iPhoneVerticalShadow.png);
     background-repeat: no-repeat;
-    cursor: pointer;
 }
 .slider__image_horizontal {
     position: absolute;
     top: 120px;
     right: 34px;
     padding: 14px 138px 40px 60px;
-    background-image: url(./assets/iPhoneHorizontal.png);
-    background-repeat: no-repeat;
+}
+.phone {
+    z-index: 2;
+    position: relative;
+    border-radius: 20px;
     cursor: pointer;
 }
-.slider__image_vertical:hover,
-.slider__image_horizontal:hover {
-    transform: scale(.99);
-    transition: all .1s;
-}
-.vertical_screen {
+.phone_screen {
     position: absolute;
-    z-index: 2;
+    left: 10px;
+    top: 60px;
+    max-width: 196px;
+    max-height: 340px;
+    overflow: hidden;
 }
-.vertical_screen_off {
-    width: 188px;
-    height: 333px;
-    background-color: black;
+.phone_container {
+    position: absolute;
+    left: 82px;
+    top: -1px;
+    width: 216px;
+    height: 460px;
+    border-radius: 24px;
+}
+.phone_container::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: "";
+    width: calc(100% + 24px);
+    height: calc(100% + 24px);
+    background-image: url(./assets/iPhoneShadow.png);
+    background-repeat: no-repeat;
+}
+.screen {
+    position: relative;
+    top: -130px;
+    left: -10px;
     z-index: 1;
 }
-.horizontal_screen {
+.screen_off {
     position: absolute;
-    z-index: 2;
-}
-.horizontal_screen_off {
-    width: 333px;
-    height: 188px;
-    background-color: black;
+    top: 0;
+    left: 0;
     z-index: 1;
+    width: 196px;
+    height: 340px;
+    background-color: black;
+}
+.phone_container_horizontal {
+    transform: rotate(90deg);
+    left: unset;
+    top: -14px;
+    right: 241px;
+    height: 484px;
+}
+.phone_container_horizontal::after {
+    transform: scaleX(-1) translate(0, -26px);
+}
+.phone_container_horizontal .screen {
+    transform: rotate(-90deg);
+    top: -117px;
+    left: -115px;
 }
 /**/
 

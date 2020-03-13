@@ -3,8 +3,8 @@ const menu = document.getElementById("menu");
 const slider = document.getElementById("slider");
 const arrow_left = document.getElementById("arrow-left");
 const arrow_right = document.getElementById("arrow-right");
-const vertical_phone = document.getElementsByClassName("slider__image_vertical")[0];
-const horizontal_phone = document.getElementsByClassName("slider__image_horizontal")[0];
+const vertical_phone = document.getElementById("phone-vertical");
+const horizontal_phone = document.getElementById("phone-horizontal");
 //---------------------------------------------------
 const tag_menu = document.getElementById("tag-menu");
 const portfolio = document.getElementById("portfolio-items");
@@ -94,15 +94,17 @@ arrow_right.addEventListener('click', (event) => {
         slider.classList.remove('slider_blue');
     }
 });
-vertical_phone.addEventListener('click', event => {
-    const screen = vertical_phone.getElementsByClassName("vertical_screen")[0];
+vertical_phone.querySelector('img.phone').addEventListener('click', event => {
+    const screen = vertical_phone.getElementsByClassName("screen")[0];
+    const screen_offed = vertical_phone.getElementsByClassName("screen_off")[0];
     screen.classList.contains("hidden") ? screen.classList.remove("hidden") : screen.classList.add("hidden");
-    console.log(screen);
+    screen_offed.classList.contains("hidden") ? screen_offed.classList.remove("hidden") : screen_offed.classList.add("hidden");
 });
-horizontal_phone.addEventListener('click', event => {
-    const screen = horizontal_phone.getElementsByClassName("horizontal_screen")[0];
+horizontal_phone.querySelector('img.phone').addEventListener('click', event => {
+    const screen = horizontal_phone.getElementsByClassName("screen")[0];
+    const screen_offed = horizontal_phone.getElementsByClassName("screen_off")[0];
     screen.classList.contains("hidden") ? screen.classList.remove("hidden") : screen.classList.add("hidden");
-    console.log(screen);
+    screen_offed.classList.contains("hidden") ? screen_offed.classList.remove("hidden") : screen_offed.classList.add("hidden");
 });
 
 // Form 
