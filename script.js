@@ -106,8 +106,8 @@ horizontal_phone.addEventListener('click', event => {
 });
 
 // Form 
-quote_form.addEventListener('submit', event => {
-    event.preventDefault();
+const submit_button = document.getElementById('submit-button'); 
+submit_button.addEventListener('click', event => {
     const name = quote_form.querySelector('input.form__name_input');
     const email = quote_form.querySelector('input.form__email_input');
     const patt = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/; //for email

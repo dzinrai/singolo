@@ -224,7 +224,7 @@ body {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: rgba(94, 124, 204, 0.9);
+    background-color: rgba(76, 100, 164, 0.9);
     -webkit-mask:  url(./assets/chev.png) no-repeat 25% 50%;
     mask: url(./assets/chev.png) no-repeat 25% 50%;
 }
@@ -855,6 +855,7 @@ body {
     border-radius: 6px;
     border-color: rgb(240, 133, 134);
     font-size: 1.2rem;
+    color: #ffffff;
 }
 /* FOOTER */
 .footer {
