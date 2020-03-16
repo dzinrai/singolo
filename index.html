@@ -9,41 +9,58 @@
 
 <body>
 
-    <header class="header">
+    <header class="header" id="home">
         <div class="wrapper">
             <a class="logo" href="#">SINGOLO<span class="logo__star">*</span></a>
             <h1 class="hidden">SINGOLO</h1>
             <nav class="navigation">
-                <ul>
-                    <li class="navigation__item"><a href="#">HOME</a></li>
-                    <li class="navigation__item"><a href="#">SERVICES</a></li>
-                    <li class="navigation__item"><a href="#">PORTFOLIO</a></li>
-                    <li class="navigation__item"><a href="#">ABOUT</a></li>
-                    <li class="navigation__item"><a href="#">CONTACT</a></li>
+                <ul id="menu">
+                    <li class="navigation__item navigation__item_current"><a href="#home">HOME</a></li>
+                    <li class="navigation__item"><a href="#services">SERVICES</a></li>
+                    <li class="navigation__item"><a href="#portfolio">PORTFOLIO</a></li>
+                    <li class="navigation__item"><a href="#about">ABOUT</a></li>
+                    <li class="navigation__item"><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="slider">
+    <section class="slider" id="slider">
         <div class="wrapper">
 
             <div class="arrows">
-                <div class="arrows__arrow-left"></div>
-                <div class="arrows__arrow-right"></div>
+                <div class="arrows__arrow-left" id="arrow-left"></div>
+                <div class="arrows__arrow-right" id="arrow-right"></div>
             </div>
 
-            
-            <div class="slider__image">
-                <img class="slider__image_vertical" src="./assets/iPhoneVertical.png" alt="iPhone Vertical">
-                <img class="slider__image_horizontal" src="./assets/iPhoneHorizontal.png" alt="iPhone Horizontal">
+            <div class="slider__container">
+                <div class="slider__image slider__image_1">
+                    <div class="phone_container" id="phone-vertical">
+                        <img class="phone" src="./assets/iPhone.png" alt="iPhone Vertical">
+                        <div class="phone_screen">
+                            <img class="screen" src="./assets/screen1.png" alt="iPhone Vertical Screen">
+                            <div class="screen_off hidden"></div>
+                        </div>
+                    </div>
+                    <div class="phone_container phone_container_horizontal" id="phone-horizontal">
+                        <img class="phone" src="./assets/iPhone.png" alt="iPhone Horizontal">
+                        <div class="phone_screen">
+                            <img class="screen" src="./assets/screen2.png" alt="iPhone Horizontal Screen">
+                            <div class="screen_off hidden"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__image slider__image_2 hidden">
+                    <img class=" " src="./assets/slider2.png" alt="slider 2">
+                </div>
             </div>
+            
         </div>
         
             
     </section>
 
-    <section class="services">
+    <section class="services" id="services">
         <div class="wrapper">
             <h2 class="services__title">Our Services</h2>
             <p class="services__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -102,17 +119,17 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="wrapper">
             <h2 class="portfolio__title">Portfolio</h2>
             <p class="portfolio__descrition">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-            <div class="tags">
-                <span class="tags__item">All</span>
+            <div class="tags" id="tag-menu">
+                <span class="tags__item tags__item_current">All</span>
                 <span class="tags__item">Web Design</span>
                 <span class="tags__item">Graphic Design</span>
                 <span class="tags__item">Artwork</span>
             </div>
-            <div class="layout-4-column portfolio-items">
+            <div class="layout-4-column portfolio-items" id="portfolio-items">
                 <div class="portfolio-items__item">
                     <img src="./assets/pin1.png" alt="Our Work 1">
                 </div>
@@ -152,14 +169,11 @@
                     <img src="./assets/pin12.png" alt="Our Work 12">
                 </div>
 
-                <div class="portfolio-items__item">
-                    <img src="./assets/pin13.png" alt="Our Work 13">
-                </div>
             </div>
         </div>
     </section>
 
-    <section class="about-us">
+    <section class="about-us" id="about">
         <div class="wrapper">
             <h2 class="about-us__title">About Us</h2>
             <p class="about-us__descrition">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -200,18 +214,18 @@
             </div>
         </div>
     </section>
-    <section class="get-a-quote">
+    <section class="get-a-quote" id="contact">
         <div class="wrapper">
             <h2 class="get-a-quote__title">Get a Quote</h2>
             <p class="get-a-quote__descrition">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             
             <div class="layout-2-column">
-                <form class="get-a-quote__form" action="" method="post">
-                    <input class="form__name_input" type="text" placeholder="Name (Required)" pattern="[A-Za-z]">
-                    <input class="form__email_input" type="email" placeholder="Email (Required)" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                <form class="get-a-quote__form" id="quote-form" action="" method="post" onsubmit="return false;">
+                    <input class="form__name_input" type="text" placeholder="Name (Required)" required>
+                    <input class="form__email_input" type="email" placeholder="Email (Required)" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                     <input class="form__subject_input" type="text" placeholder="Subject">
                     <textarea class="form__details_textarea" name="Details" cols="30" rows="10" placeholder="Describe your project in detail..."></textarea>
-                    <input class="form__submit-button" type="submit" value="Submit">
+                    <input class="form__submit-button" id="submit-button" type="submit" value="Submit">
                 </form>
                 <div class="contacts">
                     <h3 class="contacts__title">Contact Information</h3>
@@ -238,5 +252,7 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script> 
 </body>
+
 </html>
