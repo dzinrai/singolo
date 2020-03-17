@@ -26,20 +26,23 @@ menu.addEventListener('click', (event) => {
 
 // Portfolio gimmiks
 tag_menu.addEventListener('click', (event) => {
-    console.log(event.target);
     //if(event.target.tagName !== 'span') return;
     tag_menu.querySelectorAll('span').forEach( elem => {
         elem.classList.remove('tags__item_current');
     } );
     event.target.classList.add('tags__item_current');
 
-    let rand = 1; 
+    let rand = -1; 
     for (let j = 0; j < k.length; j++) {
+        const item_pos = k[j];
         rand = Math.floor( (Math.random() * (portfolio_items.length-1)) ); // random 0-11
         // array <k> as positions of elements [1,2,3...12] => random <rand> position => [5,2,3,4,1,6,7,8,9,10,11,12]
-        const item_pos = k[j];
+        while(true){
+            rand = Math.floor( (Math.random() * (portfolio_items.length-1)) );  
+            if(rand!==j) break;
+        }
         k[j] = k[rand];
-        k[rand] = item_pos;
+        k[rand] = item_pos; 
     }
     portfolio_items.forEach( (item,i) => {       
         item.classList.remove('active'); 
@@ -47,6 +50,7 @@ tag_menu.addEventListener('click', (event) => {
     } );
     
 });
+// Portfolio image border-click
 portfolio_items.forEach( (item) => {        
     item.addEventListener('click', (event)=>{
         if(event.target.tagName === 'IMG') {
@@ -157,7 +161,10 @@ submit_button.addEventListener('click', event => {
 
     message_btn.addEventListener('click', event =>{
         message_container.remove();
+        // reset
+        quote_form.reset();
     });
+    
 });
 
 
