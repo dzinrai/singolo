@@ -1,4 +1,5 @@
 const menu = document.getElementById("menu");
+let header_height = 100;
 //---------------------------------------------------
 const slider = document.getElementById("slider");
 const arrow_left = document.getElementById("arrow-left");
@@ -14,16 +15,31 @@ const k = Array(portfolio_items.length).fill().map( (n,i) => n=i+1 );
 //---------------------------------------------------
 const quote_form = document.getElementById("quote-form");
 //---------------------------------------------------
+function link_activation(link) {
+    if( !link.parentElement.classList.contains('navigation__item_current') ){
+        menu.querySelectorAll('li').forEach( li_elem => { li_elem.classList.remove('navigation__item_current'); }); // delete all active menu classes
+        link.parentElement.classList.add('navigation__item_current');
+    }
+    
+}
+document.addEventListener('scroll', (event) => {
+    const pos = window.scrollY;
+    document.querySelectorAll('body>section').forEach( el => {
+        if( el.offsetTop - header_height < pos && (el.offsetTop + el.offsetHeight) > pos ){
+            const el_id = el.getAttribute('id');
+            const el_href = '#target_' + ( el_id==='slider' ? 'home' : el_id );
+            const a_link = menu.querySelector('a[href="'+el_href+'"]');
+            if(a_link){
+                link_activation(a_link);
+            }
+        }
+    });
+});
 // Menu gimmiks
 menu.addEventListener('click', (event) => {
-    console.log(event.target);
     if(event.target.tagName !== 'A') return;
-    menu.querySelectorAll('li').forEach( elem => {
-        elem.querySelector('a').parentElement.classList.remove('navigation__item_current');
-    } );  
-    event.target.parentElement.classList.add('navigation__item_current');
+    //link_activation(event.target);
 });
-
 // Portfolio gimmiks
 tag_menu.addEventListener('click', (event) => {
     //if(event.target.tagName !== 'span') return;
@@ -51,14 +67,12 @@ tag_menu.addEventListener('click', (event) => {
     
 });
 // Portfolio image border-click
-portfolio_items.forEach( (item) => {        
-    item.addEventListener('click', (event)=>{
-        if(event.target.tagName === 'IMG') {
-            portfolio_items.forEach( (item) => { item.classList.remove('active'); });
-            event.target.parentElement.classList.add('active');
-        }
-    })     
-} );
+portfolio.addEventListener('click', (event)=>{
+    if(event.target.tagName === 'IMG') {
+        portfolio_items.forEach( (item) => { item.classList.remove('active'); });
+        event.target.parentElement.classList.add('active');
+    }
+});
 
 // Slider gimmiks
 let slides = [1,2];
