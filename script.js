@@ -15,12 +15,12 @@ const k = Array(portfolio_items.length).fill().map( (n,i) => n=i+1 );
 //---------------------------------------------------
 const quote_form = document.getElementById("quote-form");
 //---------------------------------------------------
+// Menu gimmiks
 function link_activation(link) {
     if( !link.parentElement.classList.contains('navigation__item_current') ){
         menu.querySelectorAll('li').forEach( li_elem => { li_elem.classList.remove('navigation__item_current'); }); // delete all active menu classes
         link.parentElement.classList.add('navigation__item_current');
     }
-    
 }
 document.addEventListener('scroll', (event) => {
     const pos = window.scrollY;
@@ -34,11 +34,6 @@ document.addEventListener('scroll', (event) => {
             }
         }
     });
-});
-// Menu gimmiks
-menu.addEventListener('click', (event) => {
-    if(event.target.tagName !== 'A') return;
-    //link_activation(event.target);
 });
 // Portfolio gimmiks
 tag_menu.addEventListener('click', (event) => {
