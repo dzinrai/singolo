@@ -25,7 +25,7 @@ function link_activation(link) {
 document.addEventListener('scroll', (event) => {
     const pos = window.scrollY;
     document.querySelectorAll('body>section').forEach( el => {
-        if( el.offsetTop - header_height < pos && (el.offsetTop + el.offsetHeight) > pos ){
+        if( el.offsetTop - header_height < pos && (el.offsetTop + el.offsetHeight - header_height) > pos ){
             const el_id = el.getAttribute('id');
             const el_href = '#target_' + ( el_id==='slider' ? 'home' : el_id );
             const a_link = menu.querySelector('a[href="'+el_href+'"]');
