@@ -176,4 +176,17 @@ submit_button.addEventListener('click', event => {
     
 });
 
-
+//
+function phoneResizer(window_w){
+    if(window_w >=768 && window_w <=1020){
+        slider.style.paddingTop = (window_w/1020/(768/1020) -1)*150+"px";
+        vertical_phone.style.transform = "scaleX("+String(window_w/1020)+") scaleY("+String(window_w/1020)+")";
+        horizontal_phone.style.transform = "scaleX("+String(window_w/1020)+") scaleY("+String(window_w/1020)+") rotate(90deg)";
+    }else{
+        slider.style.paddingTop = null;
+    }
+}
+window.addEventListener('resize', ()=>{
+    phoneResizer(window.innerWidth);
+});
+phoneResizer(window.innerWidth);
