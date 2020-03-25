@@ -175,7 +175,24 @@ submit_button.addEventListener('click', event => {
     });
     
 });
-
+//
+const logo = document.getElementById('logo');
+const menu_opener_button = document.getElementById('menu-opener');
+menu_opener_button.addEventListener('click', (event) => {
+    if(menu_opener_button.classList.contains('opened')){
+        menu.parentElement.classList.remove('opened');
+        menu.classList.remove('opened');
+        menu_opener_button.classList.remove('opened');
+        //
+        logo.classList.remove('in-menu');
+    }else{
+        menu.parentElement.classList.add('opened');
+        menu.classList.add('opened');
+        menu_opener_button.classList.add('opened');
+        //
+        logo.classList.add('in-menu');
+    }
+});
 //
 function phoneResizer(window_w){
     if(window_w >=768 && window_w <=1020){
