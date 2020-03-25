@@ -184,7 +184,7 @@ section {
         z-index: 3;
         top: 0;
         width: 100vw;
-        height: 200vw;
+        height: 100vh;
     }
     .navigation.opened.navigation::after {
         position: absolute;
@@ -428,14 +428,14 @@ section {
     }
     .phone_container {
         transform: scaleX(0.75) scaleY(0.748);
-        top: -26px;
+        top: -3.5vw;
         left: 6.4vw;
     }
     .phone_container_horizontal {
         transform: scaleX(0.758) scaleY(0.748) rotate(90deg);
         right: 20.6vw;
         left: unset;
-        top: -37px;
+        top: -5vw;
     }
     .arrows__arrow-left, .arrows__arrow-right {
         position: absolute;
@@ -456,10 +456,81 @@ section {
     }
     .slider__image_2 img {
         width: 95vw;
+        margin-top: 20px;
     }
 }
 @media (max-width: 767px) {
-
+    .slider {
+        height: 60vw;
+        box-sizing: border-box;
+    }
+    .phone_container {
+        transform: scaleX(0.5) scaleY(0.5);
+        top: -35vw;
+        left: -10vw;
+    }
+    .phone_container_horizontal {
+        transform: scaleX(0.5) scaleY(0.5) rotate(90deg);
+        top: -43vw;
+        right: 6vw;
+        left: unset;
+    }
+    .arrows__arrow-left, .arrows__arrow-right {
+        top: 10vw;
+        width: 5vw;
+        height: 100px;
+        background-size: 16px 27px;
+        background-position: 0;
+    }
+    .arrows__arrow-left {
+        left: 0;
+        right: unset;
+    }
+    .arrows__arrow-right {
+        left: unset;
+        right: 0;
+    }
+}
+@media (max-width: 450px) {
+    .slider__image_2 img {
+        margin-top: 0;
+    }
+}
+@media (max-width: 374px) {
+    .slider {
+        max-height: 60vw;
+    }
+    .phone_container {
+        transform: scaleX(0.36) scaleY(0.36);
+        top: -35vw;
+        left: -10vw;
+    }
+    .phone_container_horizontal {
+        transform: scaleX(0.36) scaleY(0.36) rotate(90deg);
+        top: -43vw;
+        right: 6vw;
+        left: unset;
+    }
+}
+@media (max-width: 319px) {
+    .phone_container {
+        transform: scaleX(0.28) scaleY(0.28);
+        top: -65vw;
+        left: -10vw;
+    }
+    .phone_container_horizontal {
+        transform: scaleX(0.36) scaleY(0.36) rotate(90deg);
+        top: -63vw;
+        right: 0;
+        left: unset;
+    }
+    .arrows__arrow-left, .arrows__arrow-right {
+        top: 0;
+        width: 5vw;
+        height: 40px;
+        background-size: 16px 27px;
+        background-position: 0;
+    }
 }
 /* SERVICES */
 .services {

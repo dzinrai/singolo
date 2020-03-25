@@ -203,15 +203,58 @@ menu.addEventListener('click', (event) => {
     }
 });
 //
+function phonePositioning( phone, min_w, max_w, window_width, top, left, right, margin_c ){
+    // top = [start,end], left = [start,end], right = [start,end]
+    const coef = (max_w-window_width)/(max_w-min_w);
+    if( top.length>0 ){
+        phone.style.top = (top[0]+(top[1]-top[0])*coef) + "vw";
+    }else{ phone.style.top = null; }
+    if( left.length>0 ){
+        phone.style.left = (left[0]+(left[1]-left[0])*coef) + "vw";
+    }else{ phone.style.left = null; }
+    if( right.length>0 ){
+        phone.style.right = (right[0]+(right[1]-right[0])*coef) + "vw";
+    }else{ phone.style.right = null; }
+    phone.style.marginTop = (window_width/max_w/(min_w/max_w) -1)*margin_c+"px"; 
+}
+function clearStyles( phone ) {
+    phone.style.transform = null;
+    phone.style.top = null;
+    phone.style.right = null;
+    phone.style.left = null;
+    phone.style.marginTop = null;
+}
 function phoneResizer(window_w){
-    if(window_w >=768 && window_w <=1020){
-        slider.style.paddingTop = (window_w/1020/(768/1020) -1)*150+"px";
+    //
+    if(window_w >=768 && window_w <1020){
+        phonePositioning( vertical_phone, 768, 1020, window_w, [], [], [], 150 );
+        phonePositioning( horizontal_phone, 768, 1020, window_w, [], [], [], 150 );
         vertical_phone.style.transform = "scaleX("+String(window_w/1020)+") scaleY("+String(window_w/1020)+")";
-        horizontal_phone.style.transform = "scaleX("+String(window_w/1020)+") scaleY("+String(window_w/1020)+") rotate(90deg)";
+        horizontal_phone.style.transform = "scaleX("+String(window_w/1020)+") scaleY("+String(window_w/1020)+") rotate(90deg)"; 
+    }else if(window_w >=375 && window_w <768){
+        const scale_mod = 0.75*window_w/768;
+        vertical_phone.style.transform = "scaleX("+String(scale_mod)+") scaleY("+String(scale_mod)+")";
+        horizontal_phone.style.transform = "scaleX("+String(scale_mod)+") scaleY("+String(scale_mod)+") rotate(90deg)";
+        phonePositioning(vertical_phone,375,768,window_w, [-15.5, -35], [6.4, -10], [], 100);
+        phonePositioning(horizontal_phone,375,768,window_w, [-18, -43], [], [20.6, 6], 100);
+    }else if(window_w >=320 && window_w <375){
+        const scale_mod = 0.36*window_w/375;
+        vertical_phone.style.transform = "scaleX("+String(scale_mod)+") scaleY("+String(scale_mod)+")";
+        horizontal_phone.style.transform = "scaleX("+String(scale_mod)+") scaleY("+String(scale_mod)+") rotate(90deg)";
+        phonePositioning(vertical_phone,320,375,window_w, [-35, -45], [-10, -10], [],100);
+        phonePositioning(horizontal_phone,320,375,window_w, [-43, -53], [], [6, 1],100);
+    }else if(window_w <320){
+        const scale_mod = 0.3*window_w/320;
+        vertical_phone.style.transform = "scaleX("+String(scale_mod)+") scaleY("+String(scale_mod)+")";
+        horizontal_phone.style.transform = "scaleX("+String(scale_mod)+") scaleY("+String(scale_mod)+") rotate(90deg)";
+        phonePositioning(vertical_phone,200,320,window_w, [], [], [],100);
+        phonePositioning(horizontal_phone,200,320,window_w, [], [], [],100);
     }else{
-        slider.style.paddingTop = null;
+        clearStyles(vertical_phone);
+        clearStyles(horizontal_phone);
     }
 }
+
 window.addEventListener('resize', ()=>{
     phoneResizer(window.innerWidth);
 });
