@@ -1097,9 +1097,11 @@ section {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    position: fixed;
-    top: 40%;
-    left: 40%;
+    position: relative;
+    top: 34%;
+    max-width: 30%;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #f0d8d9;
     padding: 27px 25px 19px;
     font-size: 1.1rem;
@@ -1181,6 +1183,12 @@ section {
     }
     .get-a-quote__form .form__submit-button {
         max-width: unset;
+    }
+    .alert_message {
+        max-width: 80%;
+    }
+    .alert_message_button-ok {
+        max-width: 40%;
     }
 }
 @media (max-width: 374px) {

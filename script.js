@@ -15,7 +15,7 @@ const k = Array(portfolio_items.length).fill().map( (n,i) => n=i+1 );
 //---------------------------------------------------
 const quote_form = document.getElementById("quote-form");
 //---------------------------------------------------
-// Menu gimmiks
+
 function link_activation(link) {
     if( !link.parentElement.classList.contains('navigation__item_current') ){
         menu.querySelectorAll('li').forEach( li_elem => { li_elem.classList.remove('navigation__item_current'); }); // delete all active menu classes
@@ -175,10 +175,11 @@ submit_button.addEventListener('click', event => {
     });
     
 });
-//
+// Menu gimmiks
+
 const logo = document.getElementById('logo');
 const menu_opener_button = document.getElementById('menu-opener');
-menu_opener_button.addEventListener('click', (event) => {
+function toggleMenu(){
     if(menu_opener_button.classList.contains('opened')){
         menu.parentElement.classList.remove('opened');
         menu.classList.remove('opened');
@@ -191,6 +192,14 @@ menu_opener_button.addEventListener('click', (event) => {
         menu_opener_button.classList.add('opened');
         //
         logo.classList.add('in-menu');
+    }
+}
+menu_opener_button.addEventListener('click', (event) => {
+    toggleMenu();
+});
+menu.addEventListener('click', (event) => {
+    if(event.target.tagName === 'A') {
+        toggleMenu();
     }
 });
 //
