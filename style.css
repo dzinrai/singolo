@@ -135,7 +135,7 @@ section {
     margin-right: 14px;
 }
 .navigation .navigation__item:last-child {
-    margin-right: 9px;
+    margin-right: 0;
 }
 @media (min-width: 768px) and (max-width: 1019px) {
     .header .wrapper{
@@ -329,12 +329,12 @@ section {
     background-color: rgba(140, 164, 228, 0.7);
 }
 .arrows__arrow-left {
-    left: 1px;
+    left: -20px;
     background-image: url(./assets/chev.png);
     background-repeat: no-repeat;
 }
 .arrows__arrow-right {
-    right: -1px;
+    right: -20px;
     background-image: url(./assets/chev.png);
     background-repeat: no-repeat;
     transform: scaleX(-1);
@@ -365,7 +365,7 @@ section {
 }
 .phone_container {
     position: absolute;
-    left: 82px;
+    left: 70px;
     top: -1px;
     width: 216px;
     height: 460px;
@@ -401,7 +401,7 @@ section {
     transform: rotate(90deg);
     left: unset;
     top: -14px;
-    right: 241px;
+    right: 222px;
     height: 484px;
 }
 .phone_container_horizontal::after {
@@ -553,7 +553,7 @@ section {
     letter-spacing: 0;
 }
 .services__description {
-    margin: 0 10px 47px;
+    margin: 0 10px 20px;
     font-size: 1.783em;
     line-height: 29px;
     font-weight: normal;
@@ -982,7 +982,7 @@ section {
 }
 .get-a-quote .wrapper{
     height: 618px;
-    padding: 30px 30px 0;
+    padding: 30px 30px 4px;
 }
 .get-a-quote__title {
     margin: 29px 10px 20px;
@@ -1061,12 +1061,12 @@ section {
     color: transparent;
 }
 .get-a-quote__form .form__details_textarea{
-    max-height: 202px;
+    max-height: 163px;
     padding: 10px 15px 12px;
     resize: none;
 }
 .get-a-quote__form .form__submit-button {
-    margin: 20px 0 0 0;
+    margin: 14px 0 0 0;
     max-height: 38px;
     max-width: 120px;
     font-size: 14px;
@@ -1293,7 +1293,7 @@ section {
     letter-spacing: -0.1px;
 }
 .footer .profile__social {
-    margin: 0 10px 0 0;
+    margin: 0 0 0 0;
 }
 .footer .social-icon {
     background-color: #2d303a;
