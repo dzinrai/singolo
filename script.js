@@ -37,7 +37,6 @@ document.addEventListener('scroll', (event) => {
 });
 // Portfolio gimmiks
 tag_menu.addEventListener('click', (event) => {
-    //if(event.target.tagName !== 'span') return;
     tag_menu.querySelectorAll('span').forEach( elem => {
         elem.classList.remove('tags__item_current');
     } );
@@ -45,21 +44,22 @@ tag_menu.addEventListener('click', (event) => {
 
     let rand = -1; 
     for (let j = 0; j < k.length; j++) {
-        const item_pos = k[j];
+        const currItem = portfolio_items_array[j];
         rand = Math.floor( (Math.random() * (portfolio_items.length-1)) ); // random 0-11
         // array <k> as positions of elements [1,2,3...12] => random <rand> position => [5,2,3,4,1,6,7,8,9,10,11,12]
         while(true){
             rand = Math.floor( (Math.random() * (portfolio_items.length-1)) );  
             if(rand!==j) break;
         }
-        k[j] = k[rand];
-        k[rand] = item_pos; 
+        portfolio_items_array[j] = portfolio_items_array[rand];
+        portfolio_items_array[rand] = currItem; 
     }
-    portfolio_items.forEach( (item,i) => {       
-        item.classList.remove('active'); 
-        item.querySelector('img').src = String("./assets/pin"+k[i]+".png");        
-    } );
-    
+    while (portfolio.firstChild) {
+        portfolio.removeChild(portfolio.lastChild);
+    }
+    portfolio_items_array.forEach( (item) => {
+        portfolio.appendChild(item);
+    } );    
 });
 // Portfolio image border-click
 portfolio.addEventListener('click', (event)=>{

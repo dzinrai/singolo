@@ -783,6 +783,9 @@ section {
         flex: 1 0 40%; 
         margin: 7.5px;
     }
+    .portfolio-items__item:nth-child(n+9) {
+        display: none;
+    }
 }
 /* ABOUT US */
 .about-us {
