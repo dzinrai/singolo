@@ -141,6 +141,9 @@ section {
     .header .wrapper{
         padding-right: 17px;
     }
+    .navigation {
+        margin-right: 17px;
+    }
     .navigation .navigation__item {
         line-height: 34px;
     }
@@ -169,8 +172,8 @@ section {
     .logo.in-menu {
         position: absolute;
         z-index: 4;
-        top: 26px;
-        left: 54px;
+        top: 30px;
+        left: 61px;
         line-height: 13px;
     }
     .logo.in-menu:hover {
@@ -210,7 +213,7 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        padding: 231px 0 0 14.5%;
+        padding: 234px 0 0 19.5%;
         list-style-type: none;
         font-size: 24px;
         background-color: #2d303a;
@@ -242,7 +245,8 @@ section {
         outline: none;
     }
     .navigation__menu_button.opened {
-        left: 0;
+        top: 4px;
+        left: -6px;
         transform: rotate(90deg);
     }
     .navigation__menu_button::before {
@@ -255,7 +259,7 @@ section {
         mask: url(./assets/menu-icon.png) no-repeat 50% 50%;
     }
     .navigation.opened .menu .navigation__item {
-        margin: 0 0 31px 0;
+        margin: 0 0 38px 0;
         line-height: 20px;
     }
 }
@@ -439,7 +443,7 @@ section {
     }
     .phone_container_horizontal {
         transform: scaleX(0.758) scaleY(0.748) rotate(90deg);
-        right: 20vw;
+        right: 22vw;
         left: unset;
         top: -5vw;
     }
@@ -458,7 +462,7 @@ section {
     }
     .arrows__arrow-right {
         left: unset;
-        right: -12px;
+        right: 6px;
     }
     .slider__image_2 img {
         width: 95vw;
@@ -469,20 +473,22 @@ section {
     .slider {
         height: 60vw;
         box-sizing: border-box;
+        border: none;
+        max-height: 220px;
     }
     .phone_container {
         transform: scaleX(0.5) scaleY(0.5);
-        top: -35vw;
+        top: -36vw;
         left: -10vw;
     }
     .phone_container_horizontal {
         transform: scaleX(0.5) scaleY(0.5) rotate(90deg);
-        top: -43vw;
+        top: -39vw;
         right: 6vw;
         left: unset;
     }
     .arrows__arrow-left, .arrows__arrow-right {
-        top: 10vw;
+        top: 13vw;
         width: 5vw;
         height: 100px;
         background-size: 16px 27px;
@@ -663,10 +669,26 @@ section {
     }
 }
 @media (max-width: 767px) {
+    .services {
+        border: none;
+        padding-bottom: 0;
+    }
+    .services .wrapper {
+        padding: 17px 22px 0;
+    }
+    .services__description {
+        margin-bottom: 34px;
+    }
     .service {
         flex: 1 0 100%; 
         flex-wrap: nowrap;
-        margin: 0;
+        margin: 0 0 5px 0;
+        padding-right: 7px;
+        padding-left: 7px;
+        min-height: 112px;
+    }   
+    .service:nth-child(2n) {
+        margin-left: 0;
     }
     .service__container {
         max-width: 80%;
@@ -761,11 +783,10 @@ section {
 @media (max-width: 1019px) {
     .portfolio {
         max-height: unset;
-        border: none;
     }
     .portfolio .wrapper {
         height: auto; 
-        padding: 30px 15px 57px 30px;
+        padding: 30px 30px 49px 30px;
     }
     .portfolio__descrition {
         min-height: 59px;
@@ -788,17 +809,22 @@ section {
     }
 }
 @media (max-width: 767px) {
+    .portfolio {
+        max-height: unset;
+        border: none;
+    }
     .portfolio .wrapper {
-        padding-bottom: 37px;
-        padding-left: 22.5px;
-        padding-right: 22.5px;
+        padding: 10px 22.5px 37px 22.5px;
     }
     .portfolio-items__item {
         flex: 1 0 40%; 
-        margin: 7.5px;
+        margin: 6px 7.5px;
     }
     .portfolio-items__item:nth-child(n+9) {
         display: none;
+    }
+    .tags {
+        margin: 19px 10px 8px;
     }
 }
 /* ABOUT US */
@@ -950,7 +976,7 @@ section {
         border: none;
     }
     .about-us .wrapper {
-        padding: 22px 16px 70px 33px;
+        padding: 22px 33px 70px 33px;
     }
     .about-us__title {
         margin: 30px 7.5px 20px;
@@ -977,17 +1003,24 @@ section {
     }
 }
 @media (max-width: 767px) {
+    .about-us {
+        border: none;
+    }
     .about-us .wrapper {
-        padding-bottom: 30px;
+        padding: 2px 20px 30px;
     }
     .about-us__profile {
         flex: 1 0 90%;
-        margin-top: 10px;
+        margin-top: 16px;
         padding-bottom: 10px;
+    }
+    .about-us__profile:first-child {
+        margin-top: 10px;
     }
     .about-us__descrition {
         height: unset;
         max-height: unset;
+        margin-bottom: 24px;
     }
     .profile__description {
         max-height: unset;
@@ -1254,20 +1287,27 @@ section {
         max-width: 136px;
     }
     .contacts {
-        width: 35vw;
+        width: 39vw;
         padding-top: 10px;
-        margin-left: 20px;
+        margin-left: 14px;
     }
     .contacts__description {
         margin: 0;
         line-height: 22px;
     }
     .contacts__container {
-        margin-top: 20px;
+        margin-top: 43px;
     }
 }
 @media (max-width: 767px) {
+    .get-a-quote {
+        border: none;
+    }
+    .get-a-quote .wrapper {
+        padding: 14px 20px 40px;
+    }
     .get-a-quote__descrition {
+        margin-bottom: 15px;
         max-height: unset;
     }
     .layout-2-column {
@@ -1280,9 +1320,22 @@ section {
     .get-a-quote__form {
         width: 74vw;
         height: 80vw;
+        min-height: 100vw;
+    }
+    .get-a-quote__form .form__details_textarea {
+        max-height: unset;
+        min-height: 42vw;
     }
     .get-a-quote__form .form__submit-button {
         max-width: unset;
+    }
+    .contacts {
+        padding-top: 43px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .contacts__container {
+        margin-top: 20px;
     }
     .alert_message {
         max-width: 80%;
@@ -1293,7 +1346,8 @@ section {
 }
 @media (max-width: 374px) {
     .get-a-quote__form {
-        height: 100vw;
+        min-height: 130vw;
+        height: 70vh;
     }
 }
 /* FOOTER */
@@ -1382,7 +1436,7 @@ section {
         padding: 22px 14px 0 29px;
     }
     .footer .profile__social {
-        margin: 0 10px 0 0;
+        margin: 0 27px 0 0;
     }
 }
 @media (max-width: 767px) {
@@ -1394,6 +1448,9 @@ section {
         flex-wrap: nowrap;
         justify-content: space-around;
         align-items: center;
+    }
+    .footer .profile__social {
+        margin: 0;
     }
 }
 /**/

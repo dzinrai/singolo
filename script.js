@@ -251,8 +251,8 @@ function phoneResizer(window_w){
         const scale_mod = 0.75*window_w/768;
         vertical_phone.style.transform = "scaleX("+String(scale_mod)+") scaleY("+String(scale_mod)+")";
         horizontal_phone.style.transform = "scaleX("+String(scale_mod)+") scaleY("+String(scale_mod)+") rotate(90deg)";
-        phonePositioning(vertical_phone,375,768,window_w, [-15.5, -35], [6.4, -10], [], 100);
-        phonePositioning(horizontal_phone,375,768,window_w, [-18, -43], [], [20.6, 6], 100);
+        phonePositioning(vertical_phone,375,768,window_w, [-15.5, -36], [6.4, -10], [], 100);
+        phonePositioning(horizontal_phone,375,768,window_w, [-18, -39], [], [20.6, 6], 100);
     }else if(window_w >=320 && window_w <375){
         const scale_mod = 0.36*window_w/375;
         vertical_phone.style.transform = "scaleX("+String(scale_mod)+") scaleY("+String(scale_mod)+")";
