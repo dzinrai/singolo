@@ -1,1 +1,1 @@
-# [singolo](https://dzinrai.github.io/singolo/index.html)
+# [singolo dom+responsive](https://dzinrai.github.io/singolo/index.html)
