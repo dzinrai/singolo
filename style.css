@@ -141,6 +141,12 @@ section {
     .header .wrapper{
         padding-right: 17px;
     }
+    .navigation .navigation__item {
+        line-height: 34px;
+    }
+    .navigation .navigation__item:last-child {
+        margin-right: 6px;
+    }
 }
 @media (max-width: 767px) {
     .header {
@@ -433,14 +439,14 @@ section {
     }
     .phone_container_horizontal {
         transform: scaleX(0.758) scaleY(0.748) rotate(90deg);
-        right: 20.6vw;
+        right: 20vw;
         left: unset;
         top: -5vw;
     }
     .arrows__arrow-left, .arrows__arrow-right {
         position: absolute;
         z-index: 1;
-        top: 176px;
+        top: 165px;
         width: 42px;
         height: 100px;
         background-size: 16px 27px;
@@ -452,7 +458,7 @@ section {
     }
     .arrows__arrow-right {
         left: unset;
-        right: 6px;
+        right: -12px;
     }
     .slider__image_2 img {
         width: 95vw;
@@ -630,7 +636,7 @@ section {
 }
 @media (max-width: 1019px) {
     .services {
-        padding-bottom: 0;
+        padding-bottom: 16px;
     }
     .services__title {
         margin-top: 10px;
@@ -645,8 +651,11 @@ section {
         flex-wrap: wrap;
         max-width: unset;
     }
+    .service:nth-child(2n) {
+        margin-left: 24px;
+    }
     .service__container {
-        margin: 0 0 25px 10px;
+        margin: 0 0 25px 17px;
         max-width: 70%;
     }
     .service__icon {
@@ -752,14 +761,19 @@ section {
 @media (max-width: 1019px) {
     .portfolio {
         max-height: unset;
+        border: none;
     }
     .portfolio .wrapper {
         height: auto; 
-        padding-bottom: 57px;
+        padding: 30px 15px 57px 30px;
+    }
+    .portfolio__descrition {
+        min-height: 59px;
     }
     .tags {
         display: flex;
         flex-wrap: wrap;
+        margin: 11px 10px 8px;
     }
     .tags .tags__item {
         margin-bottom: 5px;
@@ -770,7 +784,7 @@ section {
         max-height: unset;
     }
     .portfolio-items {
-        margin-top: 20px;
+        margin-top: 13px;
     }
 }
 @media (max-width: 767px) {
@@ -932,8 +946,11 @@ section {
     mask: url(./assets/linkedin.png) no-repeat 50% 50%;
 }
 @media (max-width: 1019px) {
+    .about-us {
+        border: none;
+    }
     .about-us .wrapper {
-        padding-bottom: 57px;
+        padding: 22px 16px 70px 33px;
     }
     .about-us__title {
         margin: 30px 7.5px 20px;
@@ -946,8 +963,17 @@ section {
         flex: 1 0 30%;
         width: unset;
     }
+    .about-us .layout-3-column {
+        padding-top: 23px;
+    }
     .profile__description {
         max-height: 60px;
+    }
+    .profile__name {
+        margin: 5px -1px 0;
+    }
+    .about-us__profile .profile__social {
+        margin: 2px 0 0 2px;
     }
 }
 @media (max-width: 767px) {
@@ -1206,11 +1232,11 @@ section {
     .get-a-quote .wrapper {
         height: auto;
         padding-bottom: 57px;
-        padding: 30px 20px 30px 30px;
+        padding: 23px 20px 30px 30px;
     }
     .get-a-quote__form {
         width: 74vw;
-        height: 40vw;
+        height: 50vw;
         /*max-height: 375px;*/
     }
     .get-a-quote__form input {
@@ -1354,6 +1380,9 @@ section {
 @media (max-width: 1019px) {
     .footer .wrapper {
         padding: 22px 14px 0 29px;
+    }
+    .footer .profile__social {
+        margin: 0 10px 0 0;
     }
 }
 @media (max-width: 767px) {
